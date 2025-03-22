@@ -1,0 +1,87 @@
+/* Shop Container */
+.shop-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Filters Section */
+  .filters {
+    width: 20%;
+    margin-left: 50px;
+  }
+  
+  .filters h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .filters ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .filters ul li {
+    margin-bottom: 10px;
+  }
+  
+  .price-range input[type="number"] {
+    width: calc(50% - 5px);
+    margin-right: 10px;
+  }
+  
+  .price-range input[type="range"] {
+    width: 80%;
+  }
+  
+  /* Products Section */
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin-right: 50px;
+  }
+  
+  .product-card {
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .product-card h4 {
+    font-size: 20px;
+  }
+  
+  .product-card p {
+    font-size: 16   px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .shop-container {
+      flex-direction: column; /* Stack filters and products vertically */
+      align-items: center; /* Center-align content */
+      gap: 40px; /* Add spacing between sections */
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .filters {
+      width: auto; /* Allow filters to take full width */
+      text-align: center; /* Center-align filters content */
+      margin-bottom: 20px; /* Add spacing below filters */
+      border-bottom: solid #ddd; /* Optional separator for visual clarity */
+      padding-bottom: 20px; /* Add padding below filters section */
+    }
+  
+    .products {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* Display two products per row */
+      gap: 15px; /* Reduce gap between product cards */
+      width: auto; /* Allow products section to adjust width dynamically */
+      text-align:center
+        }
+  }
+  

@@ -1,0 +1,81 @@
+/* Contact Form Container */
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Adjust width for two-column layout */
+  margin-bottom: 20px; /* Add spacing between rows */
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 10px; /* Reduce margin for cleaner spacing */
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none; /* Prevent resizing of the textarea */
+}
+
+button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: large;
+  cursor: pointer;
+  width: 200px;
+  align-self: center; /* Center-align button */
+}
+
+button:hover {
+  background-color: #333; /* Darker shade on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+      flex-direction: column; /* Stack form fields vertically */
+      gap: 20px; /* Add spacing between stacked fields */
+      align-items: center; /* Center-align fields */
+      text-align:center
+    }
+  }
