@@ -58,14 +58,14 @@ const Home = () => {
       <section className="max-w-7xl mx-auto px-4">
   <h2 className="text-center text-3xl font-bold mb-8">Featured Products</h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-    {featuredProducts.length > 0 ? (
-      featuredProducts.slice(0, 4).map((product) => (  // Limit to 4 products
+    {featuredProducts?.length > 0 ? (
+      featuredProducts?.slice(0, 4).map((product) => (  // Limit to 4 products
         <div
           key={product.id}
           className="border p-4 rounded-md shadow hover:shadow-lg text-center"
         >
           <img
-            src={product.images && product.images.length > 0 ? `${API_URL}/${JSON.parse(product.images)[0]}` : shop}  // Use product image or fallback
+            src={product?.images && product.images.length > 0 ? `${API_URL}/${JSON.parse(product.images)[0]}` : shop}  // Use product image or fallback
             alt={product.name}
             className="w-full h-[290px] object-cover mb-4"
           />
